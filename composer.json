@@ -1,0 +1,24 @@
+{
+    "name": "technodelight/php-jira-cli-interfaces",
+    "description": "Interfaces to be used for extending of the JIRA CLI tool",
+    "type": "jira-cli-extension",
+    "license": "GPL-3.0-or-later",
+    "authors": [
+        {
+            "name": "Zenc",
+            "email": "zenc@zenc.hu"
+        }
+    ],
+    "require": {
+        "php": ">= 7.0",
+        "symfony/dependency-injection": "2.8",
+        "symfony/config": "3.2",
+        "technodelight/php-jira-domain-models": "^1.0",
+        "symfony/console": "2.8"
+    },
+    "autoload": {
+        "psr-4": {
+            "Technodelight\\Jira\\": "src/"
+        }
+    }
+}
