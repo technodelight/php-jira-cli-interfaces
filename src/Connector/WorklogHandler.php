@@ -9,41 +9,15 @@ use Technodelight\Jira\Domain\WorklogCollection;
 
 interface WorklogHandler
 {
-    /**
-     * @param DateTime $from
-     * @param DateTime $to
-     * @return WorklogCollection
-     */
-    public function find(DateTime $from, DateTime $to);
+    public function find(DateTime $from, DateTime $to): WorklogCollection;
 
-    /**
-     * @param Issue $issue
-     * @param int|null $limit
-     * @return WorklogCollection
-     */
-    public function findByIssue(Issue $issue, $limit = null);
+    public function findByIssue(Issue $issue, ?int $limit = null): WorklogCollection;
 
-    /**
-     * @param Worklog $worklog
-     * @return Worklog
-     */
-    public function create(Worklog $worklog);
+    public function create(Worklog $worklog): Worklog;
 
-    /**
-     * @param Worklog $worklog
-     * @return Worklog
-     */
-    public function update(Worklog $worklog);
+    public function update(Worklog $worklog): Worklog;
 
-    /**
-     * @param int $worklogId
-     * @return Worklog
-     */
-    public function retrieve($worklogId);
+    public function retrieve(int $worklogId): Worklog;
 
-    /**
-     * @param \Technodelight\Jira\Domain\Worklog $worklog
-     * @return bool
-     */
-    public function delete(Worklog $worklog);
+    public function delete(Worklog $worklog): bool;
 }

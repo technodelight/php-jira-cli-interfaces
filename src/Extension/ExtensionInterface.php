@@ -7,7 +7,7 @@ use Symfony\Component\DependencyInjection\ContainerBuilder;
 
 interface ExtensionInterface
 {
-    public function load(array $configs, ContainerBuilder $container);
+    public function load(array $configs, ContainerBuilder $container): void;
 
     public function configure(): ArrayNodeDefinition;
 }

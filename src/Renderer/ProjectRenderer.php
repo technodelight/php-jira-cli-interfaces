@@ -7,5 +7,5 @@ use Technodelight\Jira\Domain\Project;
 
 interface ProjectRenderer
 {
-    public function render(OutputInterface $output, Project $project);
+    public function render(OutputInterface $output, Project $project): void;
 }

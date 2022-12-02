@@ -7,5 +7,5 @@ use Technodelight\Jira\Domain\Issue;
 
 interface IssueRenderer
 {
-    public function render(OutputInterface $output, Issue $issue);
+    public function render(OutputInterface $output, Issue $issue): void;
 }
